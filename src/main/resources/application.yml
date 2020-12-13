@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: keycloak-sso
+server:
+  port: 8000
+  servlet:
+    context-path: /api
+keycloak:
+  realm: desenvolvimento
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: spring-application-example
+  credentials:
+    secret: cc8751a1-06c6-4a4c-95b4-38791678888b
+  use-resource-role-mappings: true
+  bearer-only: true
